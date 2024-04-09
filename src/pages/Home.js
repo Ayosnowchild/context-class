@@ -5,12 +5,12 @@ import { ThemeContext, UserContext } from "../App";
 
 function Home() {
   let theme = useContext(ThemeContext);
-  let user = useContext(UserContext);
+  let { user } = useContext(UserContext);
   return (
     <div className={theme ? "home-container" : "home-dark"}>
       <Nav />
       <div className="section-container">
-        <p>Products for {user}</p>
+        <p>Products for {user.firstname}</p>
         <div className="product-container">
           <ProductCard
             image={"../../image/ab.jpg"}

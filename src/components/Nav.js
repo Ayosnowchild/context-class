@@ -8,7 +8,9 @@ export default function Nav() {
   return (
     <div className={theme ? "nav" : "nav-dark"}>
       <Link to={"/"}>HomeDepot</Link>
-      <button>Log in</button>
+      <Link to={"/signup"}>
+        <button>Sign Up</button>
+      </Link>
       <Link to={"/profile"}>Profile</Link>
       <Link to={"/cart"}>Cart </Link>
     </div>
